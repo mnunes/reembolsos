@@ -15,9 +15,11 @@ desde que o pacote `devtools` esteja instalado em seu R. Se o comando acima não
     
 # Exemplos de utilização
 
+Que tal verificar quanto dinheiro o Brasil está reembolsando anualmente para os deputados federais?
 
+![alt text](imagens/reembolsos_totais.png "Como criar um novo relatório - Figura 1")
 
-Veja mais exemplos de utilização no texto [Verifique os gastos do seu deputado]().
+Veja mais exemplos de utilização do pacote no texto [Verifique os gastos do seu deputado](http://marcusnunes.me/blog/) (o link já já vai aparecer).
 
 # To-Do List
 
