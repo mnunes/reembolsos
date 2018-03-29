@@ -1,69 +1,96 @@
 \name{camara}
-\alias{re}
-\title{Modelo de Relatório para o Laboratório de Estatística Aplicada (LEA)}
+\alias{camara}
+\title{Pedidos de reembolso dos deputados federais brasileiros}
 \usage{
-modeloLEA(..., keep_tex = TRUE, citation_package = "natbib")
-}
-\arguments{
-\item{...}{Argumentos adicionais para \code{rmarkdown::pdf_document}}
-
-\item{keep_tex}{Argument boleano para selecionar se os arquivos \code{.tex} intermediários devem ficar armazenados no disco. O padrão é \code{TRUE}}
-
-\item{citation_package}{Tipo de bibliografia a ser utilizada. O padrão é \code{natbib}.}
-}
-\value{
-Output de R Markdown output para ser passado para
-\code{\link[rmarkdown:render]{render}}
+data(camara)
 }
 \description{
-Modelo de documento para geração de relatórios no Laboratório de Estatística Aplicada da UFRN.
+Pedidos de reembolso dos deputados federais brasileiros
 }
-\section{Document options}{
+\section{Format}{
 
-Existem diversas opções a serem utilizadas no preâmbulo do documento, a fim de personalizá-lo. Estas opções estão descritas abaixo:
+Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
 
-\describe{
-  \item{\code{abstract}}{(Opcional, mas recomendado) Resumo do relatório.}
-  \item{\code{address}}{(Obrigatório) Descrição do local onde consulente e consultores trabalham ou estão vinculados.}
-  \item{\code{author}}{(Obrigatório) Lista de consultores, consulente(s) e orientador(a) do trabalho.}
-  \item{\code{bibliography}}{(Opcional, mas recomendado) Nome do arquivo \code{.bib} no qual as referências estão colocadas.}
-  \item{\code{footer_contents}}{(Opcional, mas recomendado) Título do relatório (ou uma abreviação dele) a fim que que apareça no rodapé de todas as páginas do documento.}
-  \item{\code{keywords}}{(Opcional, mas recomendado) Palavras-chave do relatório. Coloque o principal método estatístico utilizado no documento como primeira palavra-chave, a fim de facilitar a catalogação nos registros do LEA.}
-  \item{\code{numbersections}}{(Obrigatório) Define se as seções do relatório serão numeradas ou não. Por padrão, as seções dos relatórios são numeradas.}
-  \item{\code{one_column}}{(Obrigatório) Valor lógico responsável por definir se o relatório será em uma \code{TRUE} ou duas colunas \code{FALSE}. A versão em duas colunas está bugada por enquanto.}
-  \item{\code{output}}{(Obrigatório) Avida ao \code{rmarkdown} para renderizar o documento final através da função \code{modeloLEA}; precisa ser colocada como \code{modeloLEA::modeloLEA}.}
-  \item{\code{secnumdepth}}{(Optional) Nível de subnumeração do (LaTeX). O padrão é 5.}
-  \item{\code{title}}{(Obrigatório) Título do relatório.}
-  \item{\code{watermark}}{(Obrigatório) Valor lógico que colocará a marca d'água \sQuote{RASCUNHO} nas páginas do documento. Deve estar colocada como \code{TRUE} enquanto o relatório estiver circulando entre os consultores e os orientadores. Deve ser mudado para \code{FALSE} antes de ser entregue ao consulente.}
-}
+\item{\code{applicant_id}}{Identifying number of a congressperson or the Chamber of Deputies leadership for the sake of transparency and accountability within this allowance.}
 
-O arquivo de exemplo do pacote possui um relatório fictício com estas opções já todas preenchidas.
+\item{\code{batch_number}}{In the context of this allowance the batch number refers to the cover number of a batch grouping receipts handed in to the Chamber of Deputies to be reimbursed. This data together with the reimbursement number helps in finding the receipt in the Lower House Archive.}
+
+\item{\code{cnpj_cpf}}{CNPJ or CPF are identification numbers issued for, respectively, companies and people by Federal Revenue of Brazil. CNPJ are 14 digits long and CPF are 11 digits long. This field is the identification number (CNPJ or CPF) of the legal entity issuing the receipt. The receipt is a proof of the expense and is a valid document used to claim for a reimbursement.}
+
+\item{\code{congressperson_document}}{Document used to identify the congressperson at the Chamber of Deputies. May change from one term to another.}
+
+\item{\code{congressperson_id}}{Unique identifier number of a congressperson at the Chamber of Deputies.}
+
+\item{\code{congressperson_name}}{Name used by the congressperson during his term in office. Usually it is composed by two elements: a given name and a family name; two given names; or two forename, except if the head of the Chamber of Deputies explicitly alter this rule in order to avoid confusion.}
+
+\item{\code{document_id}}{}
+
+\item{\code{document_number}}{This field is the identifying number issued in the receipt, in the proof of expense declared by the congressperson in this allowance.}
+
+\item{\code{document_type}}{Type of receipt — 0 (zero) for bill of sale; 1 (one) for simple receipt; and 2 (two) to expense made abroad.}
+
+\item{\code{document_value}}{Value of the expense in the receipt. If it refers to fly tickets this value can be negative, meaning that it is a credit related to another fly tickets issued but not used by the congressperson (the same is valid for `total_net_value`).}
+
+\item{\code{installment}}{The number of the installment of the receipt. Used when the receipt has to be reimbursed in installments.}
+
+\item{\code{issue_date}}{Issuing date of the receipt.}
+
+\item{\code{leg_of_the_trip}}{Leg of the trip when the receipt refers to a fly ticket.}
+
+\item{\code{month}}{Month of the receipt. It is used together with the year to determine in which month the debt will be considered in the context of this allowance.}
+
+\item{\code{numbers}}{}
+
+\item{\code{party}}{It represents the abbreviation of a party. Definition of party: it is an organization built by people with interests or ideologies in common. They form an association with the purpose of achieving power to implement a government program. They are legal entities, free and autonomous when it comes to their creation and self-organization, since they respect the constitutional commandments.}
+
+\item{\code{passenger}}{Name of the passenger when the receipt refers to a fly ticket.}
+
+\item{\code{remark_value}}{Remarked value of the expense concerning the value of the receipt, or remarked value of the expense.}
+
+\item{\code{state}}{In the context of this allowance it represents the state or federative unit that elected the congressperson; it is also used to define the value of the allowance to the congressperson.}
+
+\item{\code{subquota_description}}{The description of the category group referring to the nature of the expense.}
+
+\item{\code{subquota_group_description}}{Description of the detailed specification required by certain category groups.}
+
+\item{\code{subquota_group_id}}{In the context of this allowance there are expenses under certain category groups that require further specifications (e.g. fuel). This variable represents the code of these detailed specification.}
+
+\item{\code{subquota_number}}{In the context of this allowance this is the code of the category group referring to the nature of the expense claimed by the congressperson's receipt, the receipt of what was debited from the congressperson's account.}
+
+\item{\code{supplier}}{Name of the supplier of the product or service specified by the receipt.}
+
+\item{\code{term}}{Legislative period: 4 years period, the same period of the term of congresspeople. In the context of this allowance, it represents the initial year of the legislature. It is also used as part of the Congressperson Document Number since it changes in between legislatures.}
+
+\item{\code{term_id}}{Legislative period: 4 years period, the same period of the term of congresspeople. In the context of this allowance it represents the identifying code of the legislature, an ordinal number incremented by one each new legislature (e.g. the 2011 legislature is the 54th legislature).}
+
+\item{\code{total_net_value}}{Net value of the receipt calculated from the value of the receipt and the remarked value. This is the value that is going to be debited from the congressperson's account. If the category group is Telephone and the value is zero, it means the expense was franchised out.}
+
+\item{\code{total_value}}{}
+
+\item{\code{year}}{Year of the receipt. It is used together with the month to determine in which month the debt will be considered in the context of this allowance.}
+
 }
 
 \examples{
 \dontrun{
-rmarkdown::draft("MyArticle.Rmd", template = "pdf", package = "modeloLEA")
-rmarkdown::render("MyArticle.Rmd")
+data(camara)
+camara %>%
+  select(document_value, year) %>%
+  group_by(year) %>%
+  summarise(total=sum(document_value)) %>%
+  print(n=Inf) %>%
+  ggplot(., aes(x=year, y=total/1e6)) +
+  geom_line() +
+  labs(x="Ano", y="Reembolsos (em milhões de R$)") +
+  scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
+  scale_y_continuous(limits = c(0, 250))
 }
 
 }
 \references{
-D Dddelbuettel (2017). Pinp Is Not PNAS -- Two-Column PDF Template. \url{https://github.com/eddelbuettel/pinp}
+https://github.com/okfn-brasil/serenata-toolbox/
 
-JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
-Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman,
-Kirill Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver Keyes
-and Miao Yu (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.
-\url{https://CRAN.R-project.org/package=rticles}
-
-JJ Allaire, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley
-Wickham, Aron Atkins, Rob Hyndman and Ruben Arslan (2017). rmarkdown: Dynamic Documents for R.
-R package version 1.6. \url{https://CRAN.R-project.org/package=rmarkdown}
-
-Yihui Xie (2017). knitr: A General-Purpose Package for Dynamic Report Generation in R. R
-package version 1.17.
 }
 \seealso{
-\code{\link[rticles]{pnas_article}}
-\code{\link[pinp]{pinp}}
+
 }
