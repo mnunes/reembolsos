@@ -4,12 +4,16 @@
 \usage{
 data(camara)
 }
+
 \description{
 Pedidos de reembolso dos deputados federais brasileiros
 }
+
 \section{Format}{
 
 Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
+
+\describe{
 
 \item{\code{applicant_id}}{Identifying number of a congressperson or the Chamber of Deputies leadership for the sake of transparency and accountability within this allowance.}
 
@@ -27,7 +31,7 @@ Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido d
 
 \item{\code{document_number}}{This field is the identifying number issued in the receipt, in the proof of expense declared by the congressperson in this allowance.}
 
-\item{\code{document_type}}{Type of receipt — 0 (zero) for bill of sale; 1 (one) for simple receipt; and 2 (two) to expense made abroad.}
+\item{\code{document_type}}{Type of receipt ? 0 (zero) for bill of sale; 1 (one) for simple receipt; and 2 (two) to expense made abroad.}
 
 \item{\code{document_value}}{Value of the expense in the receipt. If it refers to fly tickets this value can be negative, meaning that it is a credit related to another fly tickets issued but not used by the congressperson (the same is valid for `total_net_value`).}
 
@@ -81,7 +85,7 @@ camara %>%
   print(n=Inf) %>%
   ggplot(., aes(x=year, y=total/1e6)) +
   geom_line() +
-  labs(x="Ano", y="Reembolsos (em milhões de R$)") +
+  labs(x="Ano", y="Reembolsos (em milh?es de R$)") +
   scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
   scale_y_continuous(limits = c(0, 250))
 }
