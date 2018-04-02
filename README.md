@@ -19,7 +19,9 @@ Que tal verificar quanto dinheiro o Brasil está reembolsando anualmente para os
 
 ![alt text](imagens/reembolsos_totais.png "Como criar um novo relatório - Figura 1")
 
-Veja mais exemplos de utilização do pacote no texto [Verifique os gastos do seu deputado](http://marcusnunes.me/blog/) (o link já já vai aparecer).
+Spoiler: foram 225 milhões só em 2017, quase o dobro de 2009.
+
+Veja mais exemplos de utilização do pacote no texto [Verifique os gastos do seu deputado](http://marcusnunes.me/controle-de-gastos-publicos-como-verificar-quanto-os-deputados-federais-estao-gastando/).
 
 # To-Do List
 
