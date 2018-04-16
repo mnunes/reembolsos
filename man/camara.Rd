@@ -76,8 +76,8 @@ Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido d
 }
 
 \examples{
-\dontrun{
 data(camara)
+
 camara %>%
   select(document_value, year) %>%
   group_by(year) %>%
@@ -89,11 +89,8 @@ camara %>%
   scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
   scale_y_continuous(limits = c(0, 250))
 }
-
-}
 \references{
 https://github.com/okfn-brasil/serenata-toolbox/
-
 }
 \seealso{
 
