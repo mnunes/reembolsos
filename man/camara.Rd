@@ -77,7 +77,6 @@ Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido d
 
 \examples{
 data(camara)
-
 camara %>%
   select(document_value, year) %>%
   group_by(year) %>%
@@ -85,7 +84,7 @@ camara %>%
   print(n=Inf) %>%
   ggplot(., aes(x=year, y=total/1e6)) +
   geom_line() +
-  labs(x="Ano", y="Reembolsos (em milh?es de R$)") +
+  labs(x="Ano", y="Reembolsos (em milhoes de R$)") +
   scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
   scale_y_continuous(limits = c(0, 250))
 }
