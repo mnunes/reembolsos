@@ -1,17 +1,9 @@
+\docType{data}
 \name{camara}
 \alias{camara}
 \title{Pedidos de reembolso dos deputados federais brasileiros}
-\usage{
-data(camara)
-}
-
-\description{
-Pedidos de reembolso dos deputados federais brasileiros
-}
-
-\section{Format}{
-
-Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
+\format{
+  Tibble com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
 
 \describe{
 
@@ -75,6 +67,16 @@ Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido d
 
 }
 
+}
+
+\usage{
+data(camara)
+}
+
+\description{
+Pedidos de reembolso dos deputados federais brasileiros
+}
+
 \examples{
 data(camara)
 camara \%>\%
@@ -91,6 +93,4 @@ camara \%>\%
 \references{
 https://github.com/okfn-brasil/serenata-toolbox/
 }
-\seealso{
-
-}
+\keyword{datasets}
