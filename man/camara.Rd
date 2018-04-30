@@ -77,11 +77,11 @@ Um data frame com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido d
 
 \examples{
 data(camara)
-camara %>%
-  select(document_value, year) %>%
-  group_by(year) %>%
-  summarise(total=sum(document_value)) %>%
-  print(n=Inf) %>%
+camara \%>\%
+  select(document_value, year) \%>\%
+  group_by(year) \%>\%
+  summarise(total=sum(document_value)) \%>\%
+  print(n=Inf) \%>\%
   ggplot(., aes(x=year, y=total/1e6)) +
   geom_line() +
   labs(x="Ano", y="Reembolsos (em milhoes de R$)") +
