@@ -3,7 +3,7 @@
 \alias{camara}
 \title{Pedidos de reembolso dos deputados federais brasileiros}
 \format{
-  Tibble com 3099310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
+  Tibble com 3100498 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso. Os pedidos de reembolso foram realizados entre 2009 e 2018.
 
 \describe{
 
@@ -74,12 +74,13 @@ data(camara)
 }
 
 \description{
-Pedidos de reembolso dos deputados federais brasileiros
+Pedidos de reembolso dos deputados federais brasileiros do nordeste brasileiro entre 2009 e 2018
 }
 
 \examples{
 data(camara)
 camara \%>\%
+  filter(year <= 2017) \%>\%
   select(document_value, year) \%>\%
   group_by(year) \%>\%
   summarise(total=sum(document_value)) \%>\%
