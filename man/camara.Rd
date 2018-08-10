@@ -3,7 +3,7 @@
 \alias{camara}
 \title{Pedidos de reembolso dos deputados federais brasileiros}
 \format{
-  Tibble com 3100498 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso. Os pedidos de reembolso foram realizados entre 2009 e 2018.
+  Tibble com 3.100.697 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso. Os pedidos de reembolso foram realizados entre 2009 e 2018.
 
 \describe{
 
