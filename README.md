@@ -2,7 +2,7 @@
 
 Este é um pacote do R com os pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2017. Possui um data frame com 3.100.697 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
 
-Última atualização: 10 de agosto de 2018.
+Última atualização: 25 de agosto de 2018.
 
 # Instalação
 
