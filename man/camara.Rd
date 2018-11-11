@@ -80,7 +80,7 @@ Pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2018
 \examples{
 data(camara)
 camara \%>\%
-  filter(year <= 2017) \%>\%
+  filter(year <= 2018) \%>\%
   select(document_value, year) \%>\%
   group_by(year) \%>\%
   summarise(total=sum(document_value)) \%>\%
@@ -88,7 +88,7 @@ camara \%>\%
   ggplot(., aes(x=year, y=total/1e6)) +
   geom_line() +
   labs(x="Ano", y="Reembolsos (em milhoes de R$)") +
-  scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
+  scale_x_continuous(breaks = seq(2009, 2018, 1), minor_breaks = NULL) +
   scale_y_continuous(limits = c(0, 250))
 }
 \references{
