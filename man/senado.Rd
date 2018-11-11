@@ -43,9 +43,9 @@ Pedidos de reembolso dos senadores brasileiros entre 2009 e 2018.
 data(senado)
 senado \%>\%
   filter(ANO <= 2018) \%>\%
-  select(REEMBOLSADO, ANO) \%>\%
+  select(VALOR_REEMBOLSADO, ANO) \%>\%
   group_by(ANO) \%>\%
-  summarise(total=sum(REEMBOLSADO)) \%>\%
+  summarise(total=sum(VALOR_REEMBOLSADO)) \%>\%
   print(n=Inf) \%>\%
   ggplot(., aes(x=ANO, y=total/1e6)) +
   geom_line() +
