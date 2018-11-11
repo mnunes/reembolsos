@@ -40,9 +40,9 @@ Pedidos de reembolso dos senadores brasileiros entre 2009 e 2018.
 }
 
 \examples{
-data(camara)
+data(senado)
 senado \%>\%
-  filter(year <= 2018) \%>\%
+  filter(ANO <= 2018) \%>\%
   select(REEMBOLSADO, ANO) \%>\%
   group_by(ANO) \%>\%
   summarise(total=sum(REEMBOLSADO)) \%>\%
