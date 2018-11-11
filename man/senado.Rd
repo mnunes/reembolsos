@@ -1,9 +1,9 @@
 \docType{data}
-\name{camara}
-\alias{camara}
+\name{senado}
+\alias{senado}
 \title{Pedidos de reembolso dos senadores brasileiros}
 \format{
-  Tibble com 242.675 linhas e 10 colunas. Cada linha equivale a um pedido de reembolso. Os pedidos de reembolso foram realizados entre 2009 e 2018.
+  Tibble com 242.675 linhas e 10 colunas. Cada linha equivale a um pedido de reembolso dos senadores brasileiros. Os pedidos de reembolso foram realizados entre 2009 e 2018.
 
 \describe{
 
