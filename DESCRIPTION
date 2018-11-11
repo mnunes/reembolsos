@@ -1,8 +1,8 @@
 Package: reembolsos
 Type: Package
 Title: Dados de Reembolsos Pedidos pelos Deputados Federais Brasileiros
-Version: 0.1
-Date: 2018-06-06
+Version: 0.2
+Date: 2018-11-11
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
