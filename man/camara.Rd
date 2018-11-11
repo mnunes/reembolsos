@@ -74,7 +74,7 @@ data(camara)
 }
 
 \description{
-Pedidos de reembolso dos deputados federais brasileiros do nordeste brasileiro entre 2009 e 2018
+Pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2018
 }
 
 \examples{
