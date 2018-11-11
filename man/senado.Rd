@@ -50,8 +50,8 @@ senado \%>\%
   ggplot(., aes(x=ANO, y=total/1e6)) +
   geom_line() +
   labs(x="Ano", y="Reembolsos (em milhoes de R$)") +
-  scale_x_continuous(breaks = seq(2009, 2017, 1), minor_breaks = NULL) +
-  scale_y_continuous(limits = c(0, 250))
+  scale_x_continuous(breaks = seq(2008, 2018, 1), minor_breaks = NULL) +
+  scale_y_continuous(limits = c(0, 30))
 }
 \references{
 https://github.com/okfn-brasil/serenata-toolbox/
