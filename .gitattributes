@@ -1,1 +1,2 @@
 # Auto detect text files and perform LF normalization
+data/camara.rda filter=lfs diff=lfs merge=lfs -text
