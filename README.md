@@ -23,7 +23,7 @@ Que tal verificar quanto dinheiro o Brasil está reembolsando anualmente para os
 
 Spoiler: foram 225 milhões só em 2017, quase o dobro de 2009.
 
-Veja mais exemplos de utilização do pacote no texto [Verifique os gastos do seu deputado](http://marcusnunes.me/controle-de-gastos-publicos-como-verificar-quanto-os-deputados-federais-estao-gastando/).
+Veja mais exemplos de utilização do pacote no texto [Verifique os gastos do seu deputado](https://marcusnunes.me/posts/controle-de-gastos-publicos-como-verificar-quanto-os-deputados-federais-estao-gastando/).
 
 # To-Do List
 
