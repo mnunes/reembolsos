@@ -7,7 +7,7 @@ Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
   R (>= 3.6.0), ggplot2, dplyr
-Description: Dados abertos a respeitos dos pedidos de reembolso feitos pelos deputados federais entre 2009 e 2017.
+Description: Dados abertos a respeitos dos pedidos de reembolso feitos pelos deputados federais entre 2009 e 2019.
 URL: https://github.com/mnunes/reembolsos
 BugReports: https://github.com/mnunes/reembolsos/issues
 License: MIT
