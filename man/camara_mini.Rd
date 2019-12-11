@@ -3,7 +3,7 @@
 \alias{camara_mini}
 \title{Pedidos de reembolso dos deputados federais brasileiros}
 \format{
-  Tibble com os pedidos de reembolso referentes ao ano de 2019 e 29 colunas. Cada linha equivale a um pedido de reembolso dos deputados federais brasileiro.
+  Tibble com os pedidos de reembolso dos deputados federais brasileiros referentes ao ano de 2019. São 238421 e 31 colunas. Cada linha equivale a um pedido de reembolso dos deputados federais brasileiro.
 
 \describe{
 
@@ -74,7 +74,7 @@ data(camara_mini)
 }
 
 \description{
-Pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2018
+Pedidos de reembolso dos deputados federais brasileiros durante 2019.
 }
 
 \examples{
