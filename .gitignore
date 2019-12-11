@@ -31,3 +31,5 @@ vignettes/*.pdf
 analise.R
 .RDataTmp
 .RProj.user
+.Rproj.user
+data/camara.rda
