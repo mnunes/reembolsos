@@ -14,12 +14,14 @@ desde que o pacote `devtools` esteja instalado em seu R. Se o comando acima não
 
     install.packages("devtools")
     
+Após a instalação do pacote `devtools`, rode `devtools::install_github("mnunes/reembolsos")` novamente.
+
 Neste ponto, o pacote estará instalado apenas com o conjunto de dados `camara_mini`, que possui apenas os dados referentes a 2019. Para baixar o conjunto de dados completo, rode os comandos
 
     library(reembolsos)
     completar()
 
-O R vai começar a baixar o conjunto de dados completo, exibindo o progresso da instalação. Com os dados completos baixados, basta rodar `data(camara)` para ter acesso aos dados completos. Acesse o help do conjunto de dados rodando `?camara`.
+O R vai começar a baixar o conjunto de dados completo, exibindo o progresso da instalação. Com os dados completos baixados, basta rodar `data(camara)` para ter acesso a eles. Acesse o help do conjunto de dados rodando `?camara`.
 
 # Exemplos de utilização
 
