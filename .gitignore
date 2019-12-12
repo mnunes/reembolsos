@@ -31,5 +31,5 @@ vignettes/*.pdf
 analise.R
 .RDataTmp
 .RProj.user
-data/camara.rda
+#data/camara.rda
 .Rproj.user
