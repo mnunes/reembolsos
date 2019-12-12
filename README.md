@@ -14,7 +14,9 @@ desde que o pacote `devtools` esteja instalado em seu R. Se o comando acima não
 
     install.packages("devtools")
     
-Após a instalação do pacote `devtools`, rode `devtools::install_github("mnunes/reembolsos")` novamente.
+Após a instalação do pacote `devtools`, caso esteja usando Windows, instale o programa [RTools](https://cran.r-project.org/bin/windows/Rtools/) mais atual.
+
+Por fim, rode `devtools::install_github("mnunes/reembolsos")` novamente e o pacote será instalado em seu computador.
 
 Neste ponto, o pacote estará instalado apenas com o conjunto de dados `camara_mini`, que possui apenas os dados referentes a 2019. Para baixar o conjunto de dados completo, rode os comandos
 
