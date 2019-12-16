@@ -1,10 +1,8 @@
 # Descrição
 
-Este é um pacote do R com os pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2019. Possui um data frame com 3.099.310 linhas e 29 colunas. Cada linha equivale a um pedido de reembolso.
+Este é um pacote do R com os pedidos de reembolso dos deputados federais brasileiros entre 2009 e 2019. Possui vários data frames, uma para cada ano. Cada linha de cada data frame equivale a um pedido de reembolso.
 
 # Instalação
-
-Infelizmente, o github limita a hospedagem de arquivos em seu servidores a 100MB. Desta forma, este pacote não pode mais ser instalado utilizando como no passado. Por isso, é necessário seguir os passos a seguir para a sua instalação. É uma instalação feita em duas etapas. A primeira instala o pacote em si, com os dados para o ano de 2019. A segunda etapa baixa os dados adicionais, dando acesso a todos os anos da base de dados. 
 
 Basta rodar
 
@@ -18,12 +16,33 @@ Após a instalação do pacote `devtools`, caso esteja usando Windows, instale o
 
 Por fim, rode `devtools::install_github("mnunes/reembolsos")` novamente e o pacote será instalado em seu computador.
 
-Neste ponto, o pacote estará instalado apenas com o conjunto de dados `camara_mini`, que possui apenas os dados referentes a 2019. Para baixar o conjunto de dados completo, rode os comandos
+Neste ponto, o pacote estará instalado com um data frame para cada ano entre 2009 e 2019. Para verificar se o pacote foi instalado corretamente, rode os comandos
 
     library(reembolsos)
-    completar()
+    data(camara2019)
+    camara2019 %>% 
+      group_by(party) %>% 
+      summarise(Total = sum(document_value)) %>%
+      arrange(desc(Total)) %>%
+      print(n = Inf)
 
-O R vai começar a baixar o conjunto de dados completo, exibindo o progresso da instalação. Com os dados completos baixados, basta rodar `data(camara)` para ter acesso a eles. Acesse o help do conjunto de dados rodando `?camara`.
+e verifique se algum _output_ é produzido. Neste caso, a soma total de reembolsos pedidos pelos deputados, agregada por partido.
+
+# Juntando os data frames
+
+Case seja do seu interesse realizar uma análise em mais de um ano, será necessário juntar os data frames independentes em apenas um. Para isso, rode os comandos abaixo:
+
+    anos <- 2009:2019
+    
+    camara <- data(paste("camara", anos[1], sep = ""))
+    
+    for (j in anos[-1]){
+      camara <- rbind(camara,
+                      data(paste("camara", anos[j], sep = "")))
+      print("Ano de ", j, " concluído")
+    }
+
+Isso criará o objeto `camara`, com todos os mais de 3 milhões de observações armazenadas neste conjunto de dados. 
 
 # Exemplos de utilização
 
