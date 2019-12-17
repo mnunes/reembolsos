@@ -32,14 +32,16 @@ e verifique se algum _output_ é produzido. Neste caso, a soma total de reembols
 
 Case seja do seu interesse realizar uma análise em mais de um ano, será necessário juntar os data frames independentes em apenas um. Para isso, rode os comandos abaixo:
 
-    anos <- 2009:2019
+    dados <- data(package = "reembolsos")
     
-    camara <- data(paste("camara", anos[1], sep = ""))
+    camara <- get(data(list = dados$results[,3][1],
+                   package = "reembolsos"))
     
-    for (j in anos[-1]){
+    for (j in dados$results[,3][-1]){
+      print(paste("Processando ", j, ". Aguarde.", sep = ""))
       camara <- rbind(camara,
-                      data(paste("camara", anos[j], sep = "")))
-      print("Ano de ", j, " concluído")
+                      get(data(list = j,
+                               package = "reembolsos")))
     }
 
 Isso criará o objeto `camara`, com todos os mais de 3 milhões de observações armazenadas neste conjunto de dados. 
